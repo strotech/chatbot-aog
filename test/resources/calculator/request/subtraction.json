@@ -1,0 +1,44 @@
+{
+    "responseId": "a1f56f15-d9f0-4a6e-bc63-734d70e861c3-a14fa99c",
+    "queryResult": {
+      "queryText": "subtract 4 from 5",
+      "parameters": {
+        "secondnumber": 4,
+        "firstnumber": 5
+      },
+      "allRequiredParamsPresent": true,
+      "fulfillmentMessages": [
+        {
+          "text": {
+            "text": [
+              ""
+            ]
+          }
+        }
+      ],
+      "outputContexts": [
+        {
+          "name": "projects/reviewer-502b6/agent/sessions/b677d99f-3b35-cd34-dd59-f63430ee4039/contexts/__system_counters__",
+          "parameters": {
+            "no-input": 0,
+            "no-match": 0,
+            "secondnumber": 4,
+            "secondnumber.original": "4",
+            "firstnumber": 5,
+            "firstnumber.original": "5"
+          }
+        }
+      ],
+      "intent": {
+        "name": "projects/reviewer-502b6/agent/intents/b54e87ea-aeb6-4bfe-81f3-67067871d062",
+        "displayName": "fb_subtract",
+        "endInteraction": true
+      },
+      "intentDetectionConfidence": 1,
+      "languageCode": "en"
+    },
+    "originalDetectIntentRequest": {
+      "payload": {}
+    },
+    "session": "projects/reviewer-502b6/agent/sessions/b677d99f-3b35-cd34-dd59-f63430ee4039"
+  }

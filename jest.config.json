@@ -1,0 +1,12 @@
+{
+    "testMatch": ["<rootDir>/test/suites/**/*.js?(x)", "**/?(*.)(spec|test).js?(x)"],
+    "testPathIgnorePatterns": ["/node_modules/", "<rootDir>/test/setup.js"],
+    "setupFiles": ["<rootDir>/test/setup.js"],
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "modulePaths": [
+      "<rootDir>/"
+    ]
+}
