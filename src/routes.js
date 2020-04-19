@@ -10,6 +10,11 @@ router.get('/',function(request,response){
 
 router.route('/calculator').post(fulfillment.calculatorFulfillment);
 
+// eslint-disable-next-line no-unused-vars
+router.get('/debug-sentry', function mainHandler(req, res) {
+    throw new Error('My first Sentry error!');
+});
+
 
 module.exports = router;
 
