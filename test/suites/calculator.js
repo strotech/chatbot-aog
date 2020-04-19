@@ -33,7 +33,7 @@ describe("Calculator chat API", () => {
 
     describe("Demo test block", () => {
         const x=1
-        expect(x).toBe(2)
+        expect(x).toBe(1)
     })
 });
 
