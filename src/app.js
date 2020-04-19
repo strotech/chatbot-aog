@@ -1,5 +1,5 @@
 var express=require('express');
-import * as Sentry from '@sentry/node';
+const Sentry = require('@sentry/node');
 var app=express();
 var bodyParser = require('body-parser');
 
