@@ -8,10 +8,7 @@
     "tunnel": "ngrok http 7000",
     "debug": "nodemon --inspect --debug=[::]:7001 maindev.js",
     "inspect": "nodemon --inspect=0.0.0.0:6999 maindev.js",
-    "launch": "nodemon maindev.js",
-    "jenkins-start": "sudo systemctl start jenkins",
-    "jenkins-stop": "sudo systemctl stop jenkins",
-    "jenkins-status": "sudo systemctl status jenkins"
+    "launch": "nodemon maindev.js"
   },
   "engines": {
     "node": "10"
