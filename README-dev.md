@@ -4,6 +4,10 @@ https://medium.com/@antonyharfield/dialogflow-web-hooks-how-to-develop-locally-a
 
 https://medium.com/google-developer-experts/the-full-stack-guide-to-actions-for-google-assistant-e1765edd075b
 
+Deployed URL
+=========================================================
+https://us-central1-review-desk.cloudfunctions.net/app/
+
 
 Setting Config for Firebase Cloud Functions with JSON
 =========================================================
