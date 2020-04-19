@@ -5,7 +5,6 @@ https://medium.com/@antonyharfield/dialogflow-web-hooks-how-to-develop-locally-a
 https://medium.com/google-developer-experts/the-full-stack-guide-to-actions-for-google-assistant-e1765edd075b
 
 
-
 Setting Config for Firebase Cloud Functions with JSON
 ==========================================================
 https://medium.com/@AllanHasegawa/setting-config-for-firebase-cloud-functions-with-json-136f455e7c69
