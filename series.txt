@@ -1,0 +1,73 @@
+1. Application
+    npm init
+    create src folder. create app.js in it
+    Then routes.js
+    npm install --save express
+    npm install --save app-module-path
+    complete the application
+    npm install -g nodemon
+    npm install ngrok --save-dev
+    add to package.json scripts tag , "tunnel":"ngrok http 7000", then demo ngrok
+    add "launch":"nodemon maindev.js"
+    npm install eslint --save-dev
+2. Linting
+    eslint --init
+    "indent":[
+                "error",
+                4
+            ]
+    ./node_modules/.bin/eslint .
+3. Debugging
+    create debug config
+
+    copy the below debug/launch config
+    ==========================================================
+    {
+        // Use IntelliSense to learn about possible attributes.
+        // Hover to view descriptions of existing attributes.
+        // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "node",
+                "request": "attach",
+                "name": "Attach",
+                "skipFiles": [
+                    "<node_internals>/**/*.js",
+                    "${workspaceFolder}/node_modules/**/*.js",
+                    "${workspaceFolder}/lib/**/*.js"
+                ],
+                "port": 6999
+            }
+        ]
+    }
+    ==========================================================
+    add this script to package.json,   "inspect": "nodemon --inspect=0.0.0.0:6999 maindev.js",
+    demo debugging
+4. Testing
+    npm install --save-dev jest
+    modify test script as , "test": "jest --config jest.config.json --no-cache",
+    copy paste jest.config.json
+    create test folder
+    create setup.js as dummy, resources folder and suites folder
+    creater calculator.js as suite file within suites folder
+    create calculator folder inside resources. THe calculator folder will have requests folder and responses folder
+    fill the requests and responses folders as addition.json and subtraction.json accordingly
+    type in calculator.js in suites folder
+    npm install supertest --save-dev
+    npm install --save eslint-plugin-jest
+    THen add this key in eslintrc.json, "plugins": ["jest"],
+    to whitelist env variables provided by jest , "jest/globals": true 
+
+
+
+    
+
+
+
+clarifications
+====================
+body-parser 2 lines
+fulfilmment reponse key meanings
+what is --no-cache in jest config
+
