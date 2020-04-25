@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "review-desk",
+  "private_key_id": "f7e39f9f67e9bd3d61b37b34fddaec946f1f5457",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCTyAXgQgSxsJu\nJQLNx7Lc9JUzVdbX4nCF4vJrOjAXxSqjOMYVp37iDsZjmX1IB+EbGvmyML8wnmd5\ntWi5axtbUneawVbBtse1OcqVAh1So9w7+obwCforNNiGZ9HazNQoeCMYRs3d+35r\nD5Ol4YCDQ8j8TwNDmnc3FiBGpkYkvFkuktsfh+pNWStmH7cL3XgyxfiG/D3vKuRr\no/22ilrXyb9r1X2XmMAhLgVPEGjXp9OjHD7VCr9Bq9d165FS+QkW9hQWEjh5j47w\np/aqRF2h0j81I2gvkT31toRgdMmArqoe/Ryj7sIPaTCT/JxCZ5yllLEVMofXovKH\n54Sfk9kHAgMBAAECggEAKOARTbB4nM6QFzCU+uoAD+gpvM9Zbze02Q1pVrI6bL2u\n3wAx91sxX2ehR1GCH9V8fsG5dkk35wfjl6BYY+0Kp7bc70Ktt/l14INEQP1dYsWS\nrlFg8nz+0fj/daLAbCk7ljnTlCdM5l4h9W6k7jfWW4a2cJFEjAOiAYYXixUuW0qf\n0WodZoIhwJuWXnZV57avL+tWFLUf1D0CMVx5vOpu7aKHpJj5FWUdQ2266lJRKPCE\nAznAECiBYi1PI19MdvenNnaJii6b10qC3iEXUg0N+t87slnS75Vkx/GA18AN9zcj\nsEHy8W/6j/5d7Bfc5H5RhjVpsP+RVn9QXZpOj85yNQKBgQDwzfmMa25H5n+AvKGP\nxXfhs88oGzVEvYikA8dDcQ0X/h8dSSRBA+QNWo1H/8ZLDVpYsPLK5oKt/2BpiL+q\n6/B6nevbpmQpvEQ1h2T/R5rhq1pl1smZHd08iT0NjGXgkaJtriRlSF68a9HkHw2K\n9L1fUpZuAcPWPaGJR3rRCkDaawKBgQDOkgyPBhvp3BQhmEtQc1m3BHb3oz98HcvD\nfGVy0gP2d0Lwgy70NQm46+CQTDsJ7RHUHlnbSbQX7lwUcInL79ZobEmpODieQp8o\nMRUJgYj/VGnbLW5B1f0fgiObCHFnkY+OnCyr9785Ybp8/yCllCFIzJx/qJdrGoSa\nVw6QPp3a1QKBgAtANGahJlfppw9mwM2s1jsPYaBoFQcPK/Et1AOMpqX2U5HUtwLq\noZ8WGf/BLYyYJR57tfxQ5M4oXmLP5tSfjW7NLhXnIkro5u7xUoCy4cOlc+XKMUUc\nJhgL+XRGmQPzCfnB5yVsSjDXgMj9wm45nRd1Dl45auL5ojB9zHkz12/dAoGBALZN\nsoOu0oerUKDtdNpFUtHwQMX/7pEtAp09dZLFwfWL/ymfvJqNDE2E7iSrAheaf3eC\naa7b9vJ/zAfF4fZ3bfOuTbvoAB+7kBa6amR/S1Z7OwjRqVK09bUO9zllVCAhGF61\neb8y4DJWC20xA7DdcBp9aUhIk4lUV96WIiYu/MUZAoGBAIh3rhKCa4O0A491NYbR\nUXys0UgEpPjWKk2vo+DmFkiIL/z9wqM399YCxNSfBMzWt/2OR07LEpGdD+JHz3NC\nAkBJAl8quJrbFu2KJEUqk/p8MAwaQClxN7o+/vZ7W1do77iVAx3XI/8EmE6RX6bx\nHO/Wwwwx3/No34IEegEe7aSY\n-----END PRIVATE KEY-----\n",
+  "client_email": "review-desk-service@review-desk.iam.gserviceaccount.com",
+  "client_id": "111389851974952041453",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/review-desk-service%40review-desk.iam.gserviceaccount.com"
+}
