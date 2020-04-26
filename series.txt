@@ -175,10 +175,3 @@
     uncomment the production env check
     npm run deploy-cf
 
-    
-
-clarifications
-====================
-body-parser 2 lines
-fulfilmment reponse key meanings
-what is source and predeploy in firebase.json
