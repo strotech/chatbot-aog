@@ -181,5 +181,4 @@ clarifications
 ====================
 body-parser 2 lines
 fulfilmment reponse key meanings
-what is --no-cache in jest config
 what is source and predeploy in firebase.json

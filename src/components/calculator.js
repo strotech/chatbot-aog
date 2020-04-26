@@ -10,9 +10,7 @@ exports.addAndSubtract = function(req, res) {
         result=firstNum+secondNum
 
         return res.json({
-            "fulfillmentText": "Addition result is " + result.toString(),
-            "displayText": 'Addition result is '+ result.toString(),
-            "source": 'na'
+            "fulfillmentText": "Sum is " + result.toString()
         });
     }
     
@@ -25,9 +23,7 @@ exports.addAndSubtract = function(req, res) {
         
 
         return res.json({
-            "fulfillmentText": 'Subtraction result is '+ result.toString(),
-            "displayText": 'Subtraction result is '+ result.toString(),
-            "source": 'na'
+            "fulfillmentText": 'Difference is '+ result.toString()
         });
     }
 }
