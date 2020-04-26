@@ -58,8 +58,122 @@
     npm install --save eslint-plugin-jest
     THen add this key in eslintrc.json, "plugins": ["jest"],
     to whitelist env variables provided by jest , "jest/globals": true 
+    npm run test
+5. Deployment
+    Create mainprod.js, make a copy of maindev.js and edit to include firebase and export
+    make the "main" file as mainprod.js
+    npm install firebase-functions firebase-admin --save
+    npm install -g firebase-tools@latest
+    Create firebase.json and type in
+    add the tag in package.json,  "engines": { "node": "10" },
+    firebase login    
+    firebase use --add , to select your Firebase project and assign an alias.
+    add the tag, "deploy-cf": "firebase deploy --only functions",
+    npm run deploy-cf
+    https://us-central1-[yourprojectid].cloudfunctions.net/app/ 
+    https://us-central1-review-desk.cloudfunctions.net/app/calculator
+6. CI
+    create instance
+    allocate elastic ip
+    chmod 400 arrow-test.pem
+    ssh -i "arrow-test.pem" ubuntu@54.89.227.1
+    sudo apt install openjdk-8-jdk
+    Import the GPG keys of the Jenkins repository using the following wget command:  
+        wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+    The command above should output OK which means that the key has been successfully imported and packages from this repository will be considered trusted.
+    Next, add the Jenkins repository to the system with:
+        sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+    sudo apt-get update
+    sudo apt-get install jenkins
+    systemctl status jenkins
+    sudo systemctl start jenkins
+    sudo systemctl stop jenkins
+    add http inbound rule (custom tcp 8080) for 8080 as 8080 is the default port
+    follow the onscreen steps
+    To change port to 9999, 
+        sudo systemctl stop jenkins
+        sudo vim /etc/default/jenkins
+        sudo systemctl start jenkins
+    change inbound security rule for port 9999
+    Go to jenkins>Manage Jenkins> Change port number in console
+    keep all inbound rules open until the installation and port change is done. Then restrict to myip.
+    Restrict inbound rules
+    IN Global Tools configuration, configure node environment
+        Node version : 10.11.0
+        Global tools to install : firebase-tools
+    In Configure System > Global properties: Environment variable : FIREBASE_TOKEN: Get token with firebase login:ci
+    Install NodeJS plugin in jenkins
+    connect to github from jenkins
+    GitHub hook trigger for GITScm polling
+    Build envt > Provide Node & npm bin/ folder to PATH
+    Build steps > Execute shell >
+        npm install
+        npm run test
+        set +x
+        echo deploying to firebase
+        firebase deploy --only functions --token $FIREBASE_TOKEN
+    Configure github for this jenkins. Append the jenkins url with /github-webhook/
+    EDit inbound rules to anywhere and then push
+7. Cloud logging
+    TYpe in error routes
+    copy in logger.js
+    npm install --save @google-cloud/logging
+    create service account , select role as project owner, create json, download key 
+    export GOOGLE_APPLICATION_CREDENTIALS="/home/sijils/Desktop/workspaces/review-desk-test-service-account.json"
+    ==================================================================
+    const projectId = 'review-desk'
+    const { Logging } = require('@google-cloud/logging')
+
+    const logging = new Logging({projectId});
+    // eslint-disable-next-line no-unused-vars
+    module.exports = async function logger (eventInfo, context = {}, req = undefined) {
+
+        // if (process.env.NODE_ENV !== 'production') {
+        //     // eslint-disable-next-line no-unused-vars
+        //     return new Promise((resolve, reject) => {
+        //         console.error(eventInfo, context)
+        //         return resolve()
+        //     })
+        // }
+
+        const log = logging.log('chaterrors')
+
+        const metadata = {
+            severity: 'ERROR',
+            resource:{
+                type:'global'
+            }
+        };
+
+        // can be any json payload.  No specific attributes required
+        const errorEvent = {
+            event: 'ERROR',
+            message: eventInfo.stack,        
+            context: context
+        }
 
 
+        
+
+        return new Promise((resolve, reject) => {
+            log.write(log.entry(metadata, errorEvent), (error) => {
+                if (error) {
+                    return reject(error)
+                }
+                return resolve()
+            })
+        })
+    }
+
+
+    ==================================================================
+        
+    npm run launch, npm run tunnel, test the debug-error with the new url,  check logging
+    
+    create auth folder, copy key to auth folder,
+    edit the logger file to point to that key file.
+    uncomment the production env check
+    npm run deploy-cf
 
     
 
@@ -70,4 +184,4 @@ clarifications
 body-parser 2 lines
 fulfilmment reponse key meanings
 what is --no-cache in jest config
-
+what is source and predeploy in firebase.json
